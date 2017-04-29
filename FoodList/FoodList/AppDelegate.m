@@ -7,21 +7,51 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NewViewController.h"
+#import "FinishViewController.h"
+#import "TotalViewController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (void)initRootVC{
+    //仿微博新建页面的 分页展示，1将类别进行罗列，包括大类。尽量可选择。
+    NewViewController *VC1 = [[NewViewController alloc] init];
+    UINavigationController *nv1 = [[UINavigationController alloc] initWithRootViewController:VC1];
+    
+    FinishViewController *VC2 = [[FinishViewController alloc] init];
+    UINavigationController *nv2 = [[UINavigationController alloc] initWithRootViewController:VC2];
+    
+    TotalViewController *VC3 = [[TotalViewController alloc] init];
+    UINavigationController *nv3 = [[UINavigationController alloc] initWithRootViewController:VC3];
+    
+
+    VC1.title = @"新建";
+    VC2.title = @"完成";
+    VC3.title = @"统计";
+      NSArray *viewCtrs =@[nv2,nv1,nv3];
+    
+    self.rootTabbar = [[UITabBarController alloc] init];
+       [self.rootTabbar setViewControllers:viewCtrs animated:YES];
+   //改变tabbarCtr的默认页面索引
+    //self.rootTabbar.selectedIndex = 1;
+    self.window.rootViewController = self.rootTabbar;
+    
+    
+    //为各图标添加图片
+    
+    
+
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-
+    // Overr ide point for customization after application launch.
     
+    [self initRootVC];
     
-    
-    
+   
     return YES;
     
 }

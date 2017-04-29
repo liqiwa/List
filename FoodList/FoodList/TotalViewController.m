@@ -6,13 +6,13 @@
 //  Copyright (c) 2017年 LiQiwa. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "TotalViewController.h"
 
-@interface MainViewController ()
+@interface TotalViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation TotalViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

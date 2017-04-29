@@ -6,13 +6,13 @@
 //  Copyright (c) 2017年 LiQiwa. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "FinishViewController.h"
 
-@interface SecondViewController ()
+@interface FinishViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation FinishViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
