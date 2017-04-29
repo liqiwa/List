@@ -7,17 +7,29 @@
 //
 
 #import "FinishViewController.h"
-
+#import <UIViewController+MMDrawerController.h>
+#import <MMDrawerBarButtonItem.h>
+#import "LeftViewController.h"
 @interface FinishViewController ()
-
 @end
 
 @implementation FinishViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    MMDrawerBarButtonItem *leftDrawerButton = [[MMDrawerBarButtonItem alloc]initWithTarget:self action:@selector(leftDrawerButtonPress:)];
+    
+    [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)leftDrawerButtonPress:(id)sender{
+
+    NSLog(@"我点击了按钮");
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

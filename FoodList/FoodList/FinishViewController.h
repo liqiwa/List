@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FinishViewController : UIViewController
+@interface FinishViewController : UITableViewController
 
 
 @end

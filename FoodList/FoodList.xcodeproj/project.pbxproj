@@ -16,6 +16,8 @@
 		3363E6D41EB33A9100B35354 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3363E6D21EB33A9100B35354 /* LaunchScreen.xib */; };
 		3363E6E01EB33A9100B35354 /* FoodListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363E6DF1EB33A9100B35354 /* FoodListTests.m */; };
 		33A14AA51EB386DF00419F84 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AA41EB386DF00419F84 /* NewViewController.m */; };
+		33A14AAB1EB480AA00419F84 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AAA1EB480AA00419F84 /* LeftViewController.m */; };
+		92154D17EBE011FADA184320 /* libPods-FoodList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC1A19909782D772F8E7890 /* libPods-FoodList.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,12 @@
 		3363E6DF1EB33A9100B35354 /* FoodListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodListTests.m; sourceTree = "<group>"; };
 		33A14AA31EB386DF00419F84 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
 		33A14AA41EB386DF00419F84 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		33A14AA91EB480AA00419F84 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		33A14AAA1EB480AA00419F84 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		33A14AAC1EB48B5B00419F84 /* pp.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pp.pch; path = ../pp.pch; sourceTree = "<group>"; };
+		3DDDE2AEFE4A684DC8D320F7 /* Pods-FoodList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodList.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodList/Pods-FoodList.release.xcconfig"; sourceTree = "<group>"; };
+		AE87C2FF6E01AEB4D6ABA002 /* Pods-FoodList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodList/Pods-FoodList.debug.xcconfig"; sourceTree = "<group>"; };
+		CCC1A19909782D772F8E7890 /* libPods-FoodList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92154D17EBE011FADA184320 /* libPods-FoodList.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +81,8 @@
 				3363E6BF1EB33A9100B35354 /* FoodList */,
 				3363E6DC1EB33A9100B35354 /* FoodListTests */,
 				3363E6BE1EB33A9100B35354 /* Products */,
+				EBE1CBDB136ACAE04AFF546D /* Pods */,
+				CAA2749A8A1D259BDAD90A57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +106,7 @@
 				3363E6CD1EB33A9100B35354 /* Main.storyboard */,
 				3363E6D01EB33A9100B35354 /* Images.xcassets */,
 				3363E6D21EB33A9100B35354 /* LaunchScreen.xib */,
+				33A14AAC1EB48B5B00419F84 /* pp.pch */,
 				3363E6C01EB33A9100B35354 /* Supporting Files */,
 			);
 			path = FoodList;
@@ -143,6 +155,8 @@
 		33A14AA81EB3896300419F84 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				33A14AA91EB480AA00419F84 /* LeftViewController.h */,
+				33A14AAA1EB480AA00419F84 /* LeftViewController.m */,
 				33A14AA31EB386DF00419F84 /* NewViewController.h */,
 				33A14AA41EB386DF00419F84 /* NewViewController.m */,
 				3363E6C71EB33A9100B35354 /* TotalViewController.h */,
@@ -153,6 +167,23 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		CAA2749A8A1D259BDAD90A57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCC1A19909782D772F8E7890 /* libPods-FoodList.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBE1CBDB136ACAE04AFF546D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE87C2FF6E01AEB4D6ABA002 /* Pods-FoodList.debug.xcconfig */,
+				3DDDE2AEFE4A684DC8D320F7 /* Pods-FoodList.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3363E6E31EB33A9100B35354 /* Build configuration list for PBXNativeTarget "FoodList" */;
 			buildPhases = (
+				A6455E12E521C8704D0FD8DF /* [CP] Check Pods Manifest.lock */,
 				3363E6B91EB33A9100B35354 /* Sources */,
 				3363E6BA1EB33A9100B35354 /* Frameworks */,
 				3363E6BB1EB33A9100B35354 /* Resources */,
+				311B29494A7EC3F47EB30512 /* [CP] Embed Pods Frameworks */,
+				F339CABB1F580468FE82943D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +282,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		311B29494A7EC3F47EB30512 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodList/Pods-FoodList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6455E12E521C8704D0FD8DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F339CABB1F580468FE82943D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodList/Pods-FoodList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3363E6B91EB33A9100B35354 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -256,6 +338,7 @@
 				3363E6CC1EB33A9100B35354 /* FinishViewController.m in Sources */,
 				3363E6C61EB33A9100B35354 /* AppDelegate.m in Sources */,
 				33A14AA51EB386DF00419F84 /* NewViewController.m in Sources */,
+				33A14AAB1EB480AA00419F84 /* LeftViewController.m in Sources */,
 				3363E6C91EB33A9100B35354 /* TotalViewController.m in Sources */,
 				3363E6C31EB33A9100B35354 /* main.m in Sources */,
 			);
@@ -381,8 +464,11 @@
 		};
 		3363E6E41EB33A9100B35354 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE87C2FF6E01AEB4D6ABA002 /* Pods-FoodList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/pp.pch";
 				INFOPLIST_FILE = FoodList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -391,8 +477,11 @@
 		};
 		3363E6E51EB33A9100B35354 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DDDE2AEFE4A684DC8D320F7 /* Pods-FoodList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/pp.pch";
 				INFOPLIST_FILE = FoodList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

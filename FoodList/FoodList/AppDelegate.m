@@ -10,8 +10,10 @@
 #import "NewViewController.h"
 #import "FinishViewController.h"
 #import "TotalViewController.h"
+#import <MMDrawerController/MMDrawerController.h>
+#import "LeftViewController.h"
 @interface AppDelegate ()
-
+@property (nonatomic,strong)MMDrawerController *drawerCtr;
 @end
 
 @implementation AppDelegate
@@ -27,7 +29,7 @@
     TotalViewController *VC3 = [[TotalViewController alloc] init];
     UINavigationController *nv3 = [[UINavigationController alloc] initWithRootViewController:VC3];
     
-
+   // MMDrawerController *drawerController2 = []
     VC1.title = @"新建";
     VC2.title = @"完成";
     VC3.title = @"统计";
@@ -37,7 +39,27 @@
        [self.rootTabbar setViewControllers:viewCtrs animated:YES];
    //改变tabbarCtr的默认页面索引
     //self.rootTabbar.selectedIndex = 1;
-    self.window.rootViewController = self.rootTabbar;
+   
+    
+//    [self.drawerCtr setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+//        
+//        MMDrawerControllerDrawerVisualStateBlock block;
+//        block = [[MMExampleDrawerVisualStateManager sharedManager]
+//                 drawerVisualStateBlockForDrawerSide:drawerSide];
+//        if(block){
+//            block(drawerController, drawerSide, percentVisible);
+//        }
+//        
+//    }];
+    LeftViewController *leftDrawer = [[LeftViewController alloc] init];
+    self.drawerCtr = [[MMDrawerController alloc]initWithCenterViewController:self.rootTabbar
+                                                    leftDrawerViewController:leftDrawer];
+    [self.drawerCtr setShowsShadow:YES];
+    [self.drawerCtr setMaximumLeftDrawerWidth:kScreenWidth-100];
+    [self.drawerCtr setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerCtr setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    //整个视图的rootview应该是mmdrawerviewcontroller
+    self.window.rootViewController = self.drawerCtr;
     
     
     //为各图标添加图片
