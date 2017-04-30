@@ -8,8 +8,8 @@
 
 #import "LeftViewController.h"
 
-@interface LeftViewController ()
-
+@interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (strong,nonatomic)UITableView *tabView;
 @end
 
 @implementation LeftViewController

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef NS_ENUM(NSInteger, TableViewSection) {
 
-@interface LeftViewController : UITableViewController
+   TableViewSectionListGroupSection,
+   TableViewSectionSettingSection,
+    
+
+};
+@interface LeftViewController : UIViewController
 
 @end
