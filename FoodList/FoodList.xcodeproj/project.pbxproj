@@ -17,6 +17,13 @@
 		3363E6E01EB33A9100B35354 /* FoodListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363E6DF1EB33A9100B35354 /* FoodListTests.m */; };
 		33A14AA51EB386DF00419F84 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AA41EB386DF00419F84 /* NewViewController.m */; };
 		33A14AAB1EB480AA00419F84 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AAA1EB480AA00419F84 /* LeftViewController.m */; };
+		33A14AAF1EB6D19B00419F84 /* ListGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AAE1EB6D19B00419F84 /* ListGroup.m */; };
+		33A14AB21EB6D20700419F84 /* LeaveOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AB11EB6D20700419F84 /* LeaveOne.m */; };
+		33A14AB51EB6D22500419F84 /* LeaveTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AB41EB6D22500419F84 /* LeaveTwo.m */; };
+		33A14AB81EB6D24D00419F84 /* ProductUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AB71EB6D24D00419F84 /* ProductUnit.m */; };
+		33A14ABB1EB6D26D00419F84 /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14ABA1EB6D26D00419F84 /* ListItem.m */; };
+		33A14ABD1EB7803700419F84 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A14ABC1EB7803700419F84 /* libsqlite3.dylib */; };
+		33A14AC11EB780B200419F84 /* ListGroupDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AC01EB780B200419F84 /* ListGroupDao.m */; };
 		92154D17EBE011FADA184320 /* libPods-FoodList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC1A19909782D772F8E7890 /* libPods-FoodList.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +58,19 @@
 		33A14AA91EB480AA00419F84 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		33A14AAA1EB480AA00419F84 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		33A14AAC1EB48B5B00419F84 /* pp.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pp.pch; path = ../pp.pch; sourceTree = "<group>"; };
+		33A14AAD1EB6D19B00419F84 /* ListGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListGroup.h; sourceTree = "<group>"; };
+		33A14AAE1EB6D19B00419F84 /* ListGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListGroup.m; sourceTree = "<group>"; };
+		33A14AB01EB6D20700419F84 /* LeaveOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveOne.h; sourceTree = "<group>"; };
+		33A14AB11EB6D20700419F84 /* LeaveOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveOne.m; sourceTree = "<group>"; };
+		33A14AB31EB6D22500419F84 /* LeaveTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveTwo.h; sourceTree = "<group>"; };
+		33A14AB41EB6D22500419F84 /* LeaveTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveTwo.m; sourceTree = "<group>"; };
+		33A14AB61EB6D24D00419F84 /* ProductUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductUnit.h; sourceTree = "<group>"; };
+		33A14AB71EB6D24D00419F84 /* ProductUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductUnit.m; sourceTree = "<group>"; };
+		33A14AB91EB6D26D00419F84 /* ListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
+		33A14ABA1EB6D26D00419F84 /* ListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
+		33A14ABC1EB7803700419F84 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		33A14ABF1EB780B200419F84 /* ListGroupDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListGroupDao.h; sourceTree = "<group>"; };
+		33A14AC01EB780B200419F84 /* ListGroupDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListGroupDao.m; sourceTree = "<group>"; };
 		3DDDE2AEFE4A684DC8D320F7 /* Pods-FoodList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodList.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodList/Pods-FoodList.release.xcconfig"; sourceTree = "<group>"; };
 		AE87C2FF6E01AEB4D6ABA002 /* Pods-FoodList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodList/Pods-FoodList.debug.xcconfig"; sourceTree = "<group>"; };
 		CCC1A19909782D772F8E7890 /* libPods-FoodList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A14ABD1EB7803700419F84 /* libsqlite3.dylib in Frameworks */,
 				92154D17EBE011FADA184320 /* libPods-FoodList.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +121,7 @@
 			children = (
 				33A14AA81EB3896300419F84 /* Controller */,
 				33A14AA71EB3894C00419F84 /* View */,
+				33A14ABE1EB7809400419F84 /* DAO */,
 				33A14AA61EB3876100419F84 /* Model */,
 				3363E6C41EB33A9100B35354 /* AppDelegate.h */,
 				3363E6C51EB33A9100B35354 /* AppDelegate.m */,
@@ -141,6 +163,16 @@
 		33A14AA61EB3876100419F84 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33A14AB91EB6D26D00419F84 /* ListItem.h */,
+				33A14ABA1EB6D26D00419F84 /* ListItem.m */,
+				33A14AB61EB6D24D00419F84 /* ProductUnit.h */,
+				33A14AB71EB6D24D00419F84 /* ProductUnit.m */,
+				33A14AB31EB6D22500419F84 /* LeaveTwo.h */,
+				33A14AB41EB6D22500419F84 /* LeaveTwo.m */,
+				33A14AB01EB6D20700419F84 /* LeaveOne.h */,
+				33A14AB11EB6D20700419F84 /* LeaveOne.m */,
+				33A14AAD1EB6D19B00419F84 /* ListGroup.h */,
+				33A14AAE1EB6D19B00419F84 /* ListGroup.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -167,9 +199,19 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		33A14ABE1EB7809400419F84 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				33A14ABF1EB780B200419F84 /* ListGroupDao.h */,
+				33A14AC01EB780B200419F84 /* ListGroupDao.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
 		CAA2749A8A1D259BDAD90A57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33A14ABC1EB7803700419F84 /* libsqlite3.dylib */,
 				CCC1A19909782D772F8E7890 /* libPods-FoodList.a */,
 			);
 			name = Frameworks;
@@ -336,10 +378,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3363E6CC1EB33A9100B35354 /* FinishViewController.m in Sources */,
+				33A14AB81EB6D24D00419F84 /* ProductUnit.m in Sources */,
+				33A14ABB1EB6D26D00419F84 /* ListItem.m in Sources */,
 				3363E6C61EB33A9100B35354 /* AppDelegate.m in Sources */,
 				33A14AA51EB386DF00419F84 /* NewViewController.m in Sources */,
 				33A14AAB1EB480AA00419F84 /* LeftViewController.m in Sources */,
+				33A14AB21EB6D20700419F84 /* LeaveOne.m in Sources */,
+				33A14AAF1EB6D19B00419F84 /* ListGroup.m in Sources */,
 				3363E6C91EB33A9100B35354 /* TotalViewController.m in Sources */,
+				33A14AB51EB6D22500419F84 /* LeaveTwo.m in Sources */,
+				33A14AC11EB780B200419F84 /* ListGroupDao.m in Sources */,
 				3363E6C31EB33A9100B35354 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

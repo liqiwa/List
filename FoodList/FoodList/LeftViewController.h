@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListGroup.h"
 typedef NS_ENUM(NSInteger, TableViewSection) {
 
    TableViewSectionListGroupSection,
