@@ -12,6 +12,7 @@
 #import "TotalViewController.h"
 #import <MMDrawerController/MMDrawerController.h>
 #import "LeftViewController.h"
+#import "ListGroupDao.h"
 @interface AppDelegate ()
 @property (nonatomic,strong)MMDrawerController *drawerCtr;
 @end
@@ -67,12 +68,19 @@
     
 
 }
+- (void)initListGroupData{
+    ListGroupDao *listdb = [[ListGroupDao alloc] init];
+    [listdb open];
+    [listdb initialized];
+    [listdb insertData];
+    [listdb close];
 
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Overr ide point for customization after application launch.
     
     [self initRootVC];
-    
+    [self initListGroupData];
    
     return YES;
     
