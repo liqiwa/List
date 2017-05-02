@@ -21,20 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"我是leftView");
+    [self initData];
+       [self createTableView];
+    // Do any additional setup after loading the view.
+}
+- (void)initData{
     ListGroupDao *db = [[ListGroupDao alloc] init];
     [db open];
     _array = [[NSArray alloc] init];
     _array = [db selectData];
     NSLog(@"%ld",_array.count);
     [db close];
-    [self createTableView];
-    // Do any additional setup after loading the view.
+
 }
 - (void)createTableView{
-    _tabView = [[UITableView alloc] init];
+    _tabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth-100, kScreenHeight)style:UITableViewStyleGrouped];
     _tabView.dataSource = self;
     _tabView.delegate = self;
-    _tabView.frame =self.view.bounds;
     [self.view addSubview:_tabView];
     
 }
@@ -43,23 +46,27 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 
+    return 2;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     switch (section) {
         case TableViewSectionListGroupSection:
+            //返回_array数组的数量
             return 1;
-            break;
         case TableViewSectionSettingSection:
             return 1;
-            break;
+        default:
+            return 0;
     }
-    return 0;
+
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
 
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"tableviewcell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1  reuseIdentifier:@"tableviewcell"];
     }
     switch (indexPath.section) {
         case TableViewSectionListGroupSection:
@@ -67,13 +74,11 @@
             cell.textLabel.text = self.listGp.groupName;
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld",self.listGp.remainNumber];
             return cell;
-            break;
          case TableViewSectionSettingSection:
             cell.textLabel.text = @"设置";
             return cell;
           
     }
-    
     return cell;
 }
 /*

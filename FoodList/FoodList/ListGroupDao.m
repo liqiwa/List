@@ -59,9 +59,12 @@ sqlite3 *database = nil;
         const char *selectSQL = [@"select * from ListGroup" UTF8String];
         if (sqlite3_prepare_v2(database, selectSQL, -1, &statement, NULL) == SQLITE_OK) {
             while (sqlite3_step(statement) == SQLITE_ROW) {
-                NSString *data = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement,1)];
-                [dataArray addObject:data];
-                //转换成对象属性
+                 //将数据转换成对象属性
+                listGp.groupId = sqlite3_column_int(statement, 0);
+                listGp.groupName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement,1)];
+                listGp.remainNumber = sqlite3_column_int(statement, 2);
+                [dataArray addObject:listGp];
+               
             }
         }
         sqlite3_finalize(statement);

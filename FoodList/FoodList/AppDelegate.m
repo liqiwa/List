@@ -31,8 +31,9 @@
     UINavigationController *nv3 = [[UINavigationController alloc] initWithRootViewController:VC3];
     
    // MMDrawerController *drawerController2 = []
+    //将新建改成图标，点击会有反应
     VC1.title = @"新建";
-    VC2.title = @"完成";
+    VC2.title = @"清单";
     VC3.title = @"统计";
       NSArray *viewCtrs =@[nv2,nv1,nv3];
     
