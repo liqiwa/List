@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 //添加自定义tabbar，增加+按钮效果，确定位置和图片等信息
-@interface PlusTabBar : UITabBar
+@class PlusTabBar;
 
+@protocol PlusTabBarDelegate <NSObject>
+
+@optional
+- (void)tabBarDidClickedPlusButton:(PlusTabBar *)tabBar;
+
+@end
+@interface PlusTabBar : UITabBar
+@property (nonatomic,weak) id<PlusTabBarDelegate> tabBarDelegate;
 @end

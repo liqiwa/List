@@ -1,0 +1,22 @@
+//
+//  FoodList-PrefixHeader.pch
+//  FoodList
+//
+//  Created by 王琳琳 on 17/5/4.
+//  Copyright (c) 2017年 LiQiwa. All rights reserved.
+//
+
+#ifndef FoodList_FoodList_PrefixHeader_pch
+#import <Foundation/Foundation.h>
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
+#define FoodList_FoodList_PrefixHeader_pch
+//是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+//是否为iOS8及以上系统
+#define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif

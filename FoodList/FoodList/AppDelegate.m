@@ -7,12 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "NewViewController.h"
+#import "ListViewController.h"
 #import "FinishViewController.h"
 #import "TotalViewController.h"
 #import <MMDrawerController/MMDrawerController.h>
 #import "LeftViewController.h"
 #import "ListGroupDao.h"
+#import "FLTabBarController.h"
 @interface AppDelegate ()
 @property (nonatomic,strong)MMDrawerController *drawerCtr;
 @end
@@ -21,40 +22,41 @@
 
 - (void)initRootVC{
     //仿微博新建页面的 分页展示，1将类别进行罗列，包括大类。尽量可选择。
-    NewViewController *VC1 = [[NewViewController alloc] init];
-    UINavigationController *nv1 = [[UINavigationController alloc] initWithRootViewController:VC1];
-    
-    FinishViewController *VC2 = [[FinishViewController alloc] init];
-    UINavigationController *nv2 = [[UINavigationController alloc] initWithRootViewController:VC2];
-    
-    TotalViewController *VC3 = [[TotalViewController alloc] init];
-    UINavigationController *nv3 = [[UINavigationController alloc] initWithRootViewController:VC3];
-    
-   // MMDrawerController *drawerController2 = []
-    //将新建改成图标，点击会有反应
-    VC1.title = @"新建";
-    VC2.title = @"清单";
-    VC3.title = @"统计";
-      NSArray *viewCtrs =@[nv2,nv1,nv3];
-    
-    self.rootTabbar = [[UITabBarController alloc] init];
-       [self.rootTabbar setViewControllers:viewCtrs animated:YES];
-   //改变tabbarCtr的默认页面索引
-    //self.rootTabbar.selectedIndex = 1;
-   
-    
-//    [self.drawerCtr setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
-//        
-//        MMDrawerControllerDrawerVisualStateBlock block;
-//        block = [[MMExampleDrawerVisualStateManager sharedManager]
-//                 drawerVisualStateBlockForDrawerSide:drawerSide];
-//        if(block){
-//            block(drawerController, drawerSide, percentVisible);
-//        }
-//        
-//    }];
+//    ListViewController *VC1 = [[ListViewController alloc] init];
+//    UINavigationController *nv1 = [[UINavigationController alloc] initWithRootViewController:VC1];
+//    
+//    FinishViewController *VC2 = [[FinishViewController alloc] init];
+//    UINavigationController *nv2 = [[UINavigationController alloc] initWithRootViewController:VC2];
+//    
+//    TotalViewController *VC3 = [[TotalViewController alloc] init];
+//    UINavigationController *nv3 = [[UINavigationController alloc] initWithRootViewController:VC3];
+//    
+//   // MMDrawerController *drawerController2 = []
+//    //将新建改成图标，点击会有反应
+//    VC1.title = @"新建";
+//    VC2.title = @"清单";
+//    VC3.title = @"统计";
+//      NSArray *viewCtrs =@[nv2,nv1,nv3];
+//    
+//    self.rootTabbar = [[UITabBarController alloc] init];
+//       [self.rootTabbar setViewControllers:viewCtrs animated:YES];
+//   //改变tabbarCtr的默认页面索引
+//    //self.rootTabbar.selectedIndex = 1;
+//   
+//    
+////    [self.drawerCtr setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+////        
+////        MMDrawerControllerDrawerVisualStateBlock block;
+////        block = [[MMExampleDrawerVisualStateManager sharedManager]
+////                 drawerVisualStateBlockForDrawerSide:drawerSide];
+////        if(block){
+////            block(drawerController, drawerSide, percentVisible);
+////        }
+////        
+////    }];
+    FLTabBarController *rootTabbar = [[FLTabBarController alloc] init];
     LeftViewController *leftDrawer = [[LeftViewController alloc] init];
-    self.drawerCtr = [[MMDrawerController alloc]initWithCenterViewController:self.rootTabbar
+    self.drawerCtr = [[MMDrawerController alloc]initWithCenterViewController:rootTabbar
                                                     leftDrawerViewController:leftDrawer];
     [self.drawerCtr setShowsShadow:YES];
     [self.drawerCtr setMaximumLeftDrawerWidth:kScreenWidth-100];

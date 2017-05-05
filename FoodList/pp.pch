@@ -7,6 +7,9 @@
 //
 
 #ifndef FoodList_pp_pch
+#import <Foundation/Foundation.h>
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
 #define FoodList_pp_pch
 
 // Include any system framework and library headers here that should be included in all compilation units.
@@ -15,5 +18,17 @@
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kTabbarHeight 49
 #define kNavHeight 64
-
+//是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+//是否为iOS8及以上系统
+#define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+//公用颜色
+#define DSCommonColor [UIColor colorWithRed:254/255.0  green:129/255.0 blue:0 alpha:1.0]
+//导航栏标题字体大小
+#define DSNavigationFont [UIFont boldSystemFontOfSize:16]
+//导航栏标题按钮高度和边距
+#define DSNavigationItemOfTitleViewHeight 34
+#define DSNavigationItemMargin 10
+//首页导航popmenu距离顶部高度
+#define DSPopMenuMarginTop 10
 #endif
