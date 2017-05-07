@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class PlusPopoverController;
+@protocol PlusPopoverControllerDelegate
 
-@interface PlusPopoverController : UIPopoverController<UITabBarDelegate,UITableViewDataSource>
-@property (nonatomic,strong)UITableView *tabView;
+-(NSString *)PlusPopoverController:(PlusPopoverController *)pvc choiceLevelName:(NSString *)name;
+@end
+@interface PlusPopoverController : UITableViewController
+@property (nonatomic,weak)id<PlusPopoverControllerDelegate> delegate;
 @end

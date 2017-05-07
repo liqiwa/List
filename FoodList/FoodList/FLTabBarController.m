@@ -16,7 +16,7 @@
 #import "ListViewController.h"
 #import "FinishViewController.h"
 #import "PlusPopoverController.h"
-@interface FLTabBarController () <PlusTabBarDelegate>
+@interface FLTabBarController () <PlusTabBarDelegate,PlusPopoverControllerDelegate>
 
 @end
 
@@ -155,15 +155,31 @@
 {
        
     NSLog(@"我是加按钮");
-    
-    // 弹出发微博控制器
+   
+    PlusPopoverController *plusVc = [[PlusPopoverController alloc] initWithStyle:UITableViewStylePlain];
+    //plusVc.delegate = self;
+    plusVc.modalPresentationStyle = UIModalPresentationFormSheet;
+    plusVc.view.superview.frame = CGRectMake(0, 0, 430, 383);
+    plusVc.view.superview.center = CGPointMake(1024/2, 748/2);
+    [self presentViewController:plusVc animated:YES completion:nil];
+   
+   
+//    plusVc.preferredContentSize = CGSizeMake(self.view.frame.size.width / 2,self.view.frame.size.height/ 2);
+//    // 弹出发微博控制器
 //    DSComposeViewController *compose = [[DSComposeViewController alloc] init];
 //    compose.source = @"compose";
 //    compose.homeVc = self.homeViewController;
 //    DSNavigationController *nav = [[DSNavigationController alloc] initWithRootViewController:compose];
    // [self presentViewController:nav animated:YES completion:nil];
 }
+#pragma mark - PlusPopoverDelegate
+- (NSString *)PlusPopoverController:(PlusPopoverController *)pvc choiceLevelName:(NSString *)name{
+    
 
+    return @"woso";
+    
+    
+}
 
 
 

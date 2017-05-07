@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PlusPopoverController.h"
 @interface FLTabBarController : UITabBarController
 
 @end
