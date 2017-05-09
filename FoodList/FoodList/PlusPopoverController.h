@@ -12,6 +12,6 @@
 
 -(NSString *)PlusPopoverController:(PlusPopoverController *)pvc choiceLevelName:(NSString *)name;
 @end
-@interface PlusPopoverController : UITableViewController
+@interface PlusPopoverController : UIViewController
 @property (nonatomic,weak)id<PlusPopoverControllerDelegate> delegate;
 @end

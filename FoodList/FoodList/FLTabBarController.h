@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PlusPopoverController.h"
+#import <MMDrawerController/MMDrawerController.h>
+
 @interface FLTabBarController : UITabBarController
 
 @end

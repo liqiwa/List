@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332E3B251EC195B40069FC98 /* PlusButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E3B231EC195B40069FC98 /* PlusButtonViewController.m */; };
+		332E3B261EC195B40069FC98 /* PlusButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332E3B241EC195B40069FC98 /* PlusButtonViewController.xib */; };
+		332E3B2A1EC1A61F0069FC98 /* LeaveTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E3B281EC1A61F0069FC98 /* LeaveTwoViewController.m */; };
+		332E3B2B1EC1A61F0069FC98 /* LeaveTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332E3B291EC1A61F0069FC98 /* LeaveTwoViewController.xib */; };
 		333AAEA61EBB062600C3BB75 /* FLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333AAEA51EBB062600C3BB75 /* FLNavigationController.m */; };
 		33428A611EBC1572003DFDEE /* PlusPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33428A601EBC1572003DFDEE /* PlusPopoverController.m */; };
 		3363E6C31EB33A9100B35354 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363E6C21EB33A9100B35354 /* main.m */; };
@@ -48,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		332E3B221EC195B40069FC98 /* PlusButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusButtonViewController.h; sourceTree = "<group>"; };
+		332E3B231EC195B40069FC98 /* PlusButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlusButtonViewController.m; sourceTree = "<group>"; };
+		332E3B241EC195B40069FC98 /* PlusButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlusButtonViewController.xib; sourceTree = "<group>"; };
+		332E3B271EC1A61F0069FC98 /* LeaveTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveTwoViewController.h; sourceTree = "<group>"; };
+		332E3B281EC1A61F0069FC98 /* LeaveTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveTwoViewController.m; sourceTree = "<group>"; };
+		332E3B291EC1A61F0069FC98 /* LeaveTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaveTwoViewController.xib; sourceTree = "<group>"; };
 		333AAEA41EBB062600C3BB75 /* FLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNavigationController.h; sourceTree = "<group>"; };
 		333AAEA51EBB062600C3BB75 /* FLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNavigationController.m; sourceTree = "<group>"; };
 		33428A5F1EBC1572003DFDEE /* PlusPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusPopoverController.h; sourceTree = "<group>"; };
@@ -260,6 +270,12 @@
 		33A14ACF1EBA30DD00419F84 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				332E3B271EC1A61F0069FC98 /* LeaveTwoViewController.h */,
+				332E3B281EC1A61F0069FC98 /* LeaveTwoViewController.m */,
+				332E3B291EC1A61F0069FC98 /* LeaveTwoViewController.xib */,
+				332E3B221EC195B40069FC98 /* PlusButtonViewController.h */,
+				332E3B231EC195B40069FC98 /* PlusButtonViewController.m */,
+				332E3B241EC195B40069FC98 /* PlusButtonViewController.xib */,
 				33428A5F1EBC1572003DFDEE /* PlusPopoverController.h */,
 				33428A601EBC1572003DFDEE /* PlusPopoverController.m */,
 				333AAEA41EBB062600C3BB75 /* FLNavigationController.h */,
@@ -391,9 +407,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				332E3B261EC195B40069FC98 /* PlusButtonViewController.xib in Resources */,
 				3363E6CF1EB33A9100B35354 /* Main.storyboard in Resources */,
 				3363E6D41EB33A9100B35354 /* LaunchScreen.xib in Resources */,
 				3363E6D11EB33A9100B35354 /* Images.xcassets in Resources */,
+				332E3B2B1EC1A61F0069FC98 /* LeaveTwoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,12 +493,14 @@
 				33A14AAB1EB480AA00419F84 /* LeftViewController.m in Sources */,
 				33A14AB21EB6D20700419F84 /* LeaveOne.m in Sources */,
 				33A14AAF1EB6D19B00419F84 /* ListGroup.m in Sources */,
+				332E3B251EC195B40069FC98 /* PlusButtonViewController.m in Sources */,
 				33A14AC71EBA0AFD00419F84 /* LeaveTwoDAO.m in Sources */,
 				3363E6C91EB33A9100B35354 /* TotalViewController.m in Sources */,
 				33A14AB51EB6D22500419F84 /* LeaveTwo.m in Sources */,
 				33A14AC11EB780B200419F84 /* ListGroupDao.m in Sources */,
 				3363E6C31EB33A9100B35354 /* main.m in Sources */,
 				333AAEA61EBB062600C3BB75 /* FLNavigationController.m in Sources */,
+				332E3B2A1EC1A61F0069FC98 /* LeaveTwoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

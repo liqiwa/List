@@ -10,6 +10,14 @@
 
 @implementation PlusPopoverController
 
+- (void)viewDidLoad{
+  [super viewDidLoad];
+NSLog(@"this is plus pop");
+//[self.view setFrame:<#(CGRect)#>];
+    self.view.backgroundColor= [UIColor yellowColor];
+    self.view.frame = CGRectMake(0, 0, 200, 200);
+    self.view.center = CGPointMake(124/2, 748/2);
+}
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 
     return 1;

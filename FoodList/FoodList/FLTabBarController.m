@@ -15,7 +15,7 @@
 #import "PlusTabBar.h"
 #import "ListViewController.h"
 #import "FinishViewController.h"
-#import "PlusPopoverController.h"
+#import "PlusButtonViewController.h"
 @interface FLTabBarController () <PlusTabBarDelegate,PlusPopoverControllerDelegate>
 
 @end
@@ -153,24 +153,18 @@
 #pragma mark - DSTabBarDelegate
 - (void)tabBarDidClickedPlusButton:(PlusTabBar *)tabBar
 {
-       
     NSLog(@"我是加按钮");
-   
-    PlusPopoverController *plusVc = [[PlusPopoverController alloc] initWithStyle:UITableViewStylePlain];
-    //plusVc.delegate = self;
-    plusVc.modalPresentationStyle = UIModalPresentationFormSheet;
-    plusVc.view.superview.frame = CGRectMake(0, 0, 430, 383);
-    plusVc.view.superview.center = CGPointMake(1024/2, 748/2);
-    [self presentViewController:plusVc animated:YES completion:nil];
-   
-   
-//    plusVc.preferredContentSize = CGSizeMake(self.view.frame.size.width / 2,self.view.frame.size.height/ 2);
-//    // 弹出发微博控制器
-//    DSComposeViewController *compose = [[DSComposeViewController alloc] init];
-//    compose.source = @"compose";
-//    compose.homeVc = self.homeViewController;
-//    DSNavigationController *nav = [[DSNavigationController alloc] initWithRootViewController:compose];
-   // [self presentViewController:nav animated:YES completion:nil];
+   PlusButtonViewController *plusbuttonVc = [[PlusButtonViewController alloc] initWithNibName:@"PlusButtonViewController" bundle:nil];
+
+    //设置两个VC的图像大小相等。
+    plusbuttonVc.view.frame = self.view.frame;
+    [self.view addSubview:plusbuttonVc.view];
+    [self addChildViewController:plusbuttonVc];
+    [plusbuttonVc didMoveToParentViewController:self];
+//    plusVc.modalPresentationStyle = UIModalPresentationFormSheet;
+//    plusVc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    //[self presentViewController:plusbuttonVc animated:YES completion:nil];
+       //    plusVc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
 }
 #pragma mark - PlusPopoverDelegate
 - (NSString *)PlusPopoverController:(PlusPopoverController *)pvc choiceLevelName:(NSString *)name{

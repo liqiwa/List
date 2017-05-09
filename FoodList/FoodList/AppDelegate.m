@@ -14,6 +14,7 @@
 #import "LeftViewController.h"
 #import "ListGroupDao.h"
 #import "FLTabBarController.h"
+#import "PlusButtonViewController.h"
 @interface AppDelegate ()
 @property (nonatomic,strong)MMDrawerController *drawerCtr;
 @end
@@ -58,8 +59,15 @@
     LeftViewController *leftDrawer = [[LeftViewController alloc] init];
     self.drawerCtr = [[MMDrawerController alloc]initWithCenterViewController:rootTabbar
                                                     leftDrawerViewController:leftDrawer];
-    [self.drawerCtr setShowsShadow:YES];
+    [self.drawerCtr setShowsShadow:NO];
     [self.drawerCtr setMaximumLeftDrawerWidth:kScreenWidth-100];
+    /**
+     关闭侧滑手势，当plusbutton显示leave时就可以调用此方法来禁止侧滑
+     [self.drawerCtr setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
+     
+     */
+    PlusButtonViewController *plusVC = [[PlusButtonViewController alloc] init];
+    plusVC.mmCtr = self.drawerCtr;
     [self.drawerCtr setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerCtr setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     //整个视图的rootview应该是mmdrawerviewcontroller
