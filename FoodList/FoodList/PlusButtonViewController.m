@@ -44,8 +44,7 @@
 }
 */
 - (IBAction)close:(id)sender{
-    //激活MMDR侧滑方法
-    [self.mmCtr setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    
     [self willMoveToParentViewController:nil];
     [self.view removeFromSuperview];
     [self removeFromParentViewController];

@@ -64,7 +64,16 @@
 
 
 //创建自定义tabbar
-
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    
+//    for (UIView *child in self.tabBar.subviews) {
+//        if ([child isKindOfClass:[UIControl class]]) {
+//            [child removeFromSuperview];
+//        }
+//    }
+//}
 - (void)addCustomTabBar {
     
     //创建自定义tabbar
@@ -120,13 +129,7 @@
     
     FinishViewController *done = [[FinishViewController alloc] init];
     [self addOneChildVc:done title:@"完成" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
-    
-//    TotalViewController *total = [[TotalViewController alloc] init];
-//    [self addOneChildVc:total title:@"发现" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
-//
-//    TotalViewController *total1 = [[TotalViewController alloc] init];
-//    [self addOneChildVc:total1 title:@"发现" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
-    
+
 }
 
 

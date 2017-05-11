@@ -11,6 +11,5 @@
 
 @interface PlusButtonViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *popubView;
-@property (nonatomic,strong)MMDrawerController *mmCtr;
 
 @end

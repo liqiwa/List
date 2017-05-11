@@ -66,8 +66,7 @@
      [self.drawerCtr setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
      
      */
-    PlusButtonViewController *plusVC = [[PlusButtonViewController alloc] init];
-    plusVC.mmCtr = self.drawerCtr;
+
     [self.drawerCtr setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerCtr setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     //整个视图的rootview应该是mmdrawerviewcontroller
