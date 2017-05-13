@@ -8,7 +8,9 @@
 
 #import "PlusButtonViewController.h"
 #import "LeaveTwoViewController.h"
+#import "LeaveLabel.h"
 @interface PlusButtonViewController ()<UIGestureRecognizerDelegate>
+@property(nonatomic,strong)LeaveLabel *foodLabel;
 @end
 
 @implementation PlusButtonViewController
@@ -16,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.popubView.layer.cornerRadius = 10.0f;
+    [self addFoodLabel];
+    //父视图不影响子视图的透明度。
+    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
     //增加手势来判断，如果点击view之外的地方直接关闭。
     UITapGestureRecognizer *gestureRecognizer =
                     [[UITapGestureRecognizer alloc]initWithTarget:self
@@ -33,16 +38,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//添加一级类的菜品信息，或者多种类别的信息。
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (IBAction)close:(id)sender{
     
     [self willMoveToParentViewController:nil];
@@ -50,6 +48,22 @@
     [self removeFromParentViewController];
 }
 //点击label框中的一级分类，来显示二级View类中的值。
+- (void)addFoodLabel{
+    CGFloat labelx = 8;
+    CGFloat labely = 38;
+    CGFloat with = 42;
+    CGFloat height = 21;
+    NSArray * namearry = [NSArray arrayWithObjects:@"萝卜",@"白菜",@"土豆",nil];
+    for (int i = 1; i< 4; i++) {
+        CGFloat newx  = with*i +labelx ;
+        //自定义label格式
+        UILabel *label = [[LeaveLabel alloc]initWithFrame:CGRectMake(newx, labely, with, height)];
+       int randomIndex =  arc4random()%3;
+        label.text = namearry[randomIndex];
+        [self.popubView addSubview:label];
+    }
+    
+}
 //从数据库得到具体label数量。排序拍到view显示
 //根据
 - (IBAction)pushLeaveTwoVc:(id)sender{

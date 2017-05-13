@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "UIImage+Extension.h"
 #import "UIView+Extension.h"
+#import "FOODCONST.h"
 #define FoodList_pp_pch
 
 // Include any system framework and library headers here that should be included in all compilation units.

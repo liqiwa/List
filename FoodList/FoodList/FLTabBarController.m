@@ -12,12 +12,14 @@
 #import "TotalViewController.h"
 #import "FinishViewController.h"
 #import "FLNavigationController.h"
-#import "PlusTabBar.h"
+#import "PlusTabBarView.h"
 #import "ListViewController.h"
 #import "FinishViewController.h"
 #import "PlusButtonViewController.h"
-@interface FLTabBarController () <PlusTabBarDelegate,PlusPopoverControllerDelegate>
-
+#import "PlusTabBarView.h"
+@interface FLTabBarController () <PlusTabBarViewDelegate>
+@property (nonatomic, strong) PlusTabBarView *tabBarView;
+@property (nonatomic, strong) UIViewController *vc;
 @end
 
 @implementation FLTabBarController
@@ -25,19 +27,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //1.添加所有的自控制器
-    [self addAllChildVcs];
+    [super viewDidLoad];
     
-    //2.创建自定义tabbar
-    [self addCustomTabBar];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     
-    //3.设置用户信息为读书 （利用定时器获取用户未读数）
-//    [self getUnreadCount];
-//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(getUnreadCount) userInfo:nil repeats:YES];
-//    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-//    
-//    [self openClient];
-//    
+    // 自定义tabBarView
+    [self setupTabBarView];
+    
+    // 初始化所有子控制器
+    [self setupAllChildViewControllers];
 }
 
 //- (void)openClient{
@@ -61,6 +59,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+/**
+ *  自定义tabBarView
+ */
+- (void)setupTabBarView
+{
+    PlusTabBarView *tabBarView = [[PlusTabBarView alloc] init];
+    tabBarView.frame = self.tabBar.bounds;
+    tabBarView.delegate = self;
+    [self.tabBar addSubview:tabBarView];
+    self.tabBarView = tabBarView;
+}
 
 
 //创建自定义tabbar
@@ -73,16 +82,16 @@
 //            [child removeFromSuperview];
 //        }
 //    }
+////}
+//- (void)addCustomTabBar {
+//    
+//    //创建自定义tabbar
+//    PlusTabBarView *customTabBar = [[PlusTabBarView alloc] init];
+//    customTabBar.tabBarViewDelegate = self;
+//    
+//    //更换系统自带的tabbar
+//    [self setValue:customTabBar forKey:@"tabBar"];
 //}
-- (void)addCustomTabBar {
-    
-    //创建自定义tabbar
-    PlusTabBar *customTabBar = [[PlusTabBar alloc] init];
-    customTabBar.tabBarDelegate = self;
-    
-    //更换系统自带的tabbar
-    [self setValue:customTabBar forKey:@"tabBar"];
-}
 
 
 /**
@@ -119,18 +128,60 @@
     
     
 }
-
-
-- (void)addAllChildVcs
+/**
+ *  删除自带按钮
+ */
+- (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     
-    ListViewController *list = [[ListViewController alloc] init];
-    [self addOneChildVc:list title:@"清单" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
-    
-    FinishViewController *done = [[FinishViewController alloc] init];
-    [self addOneChildVc:done title:@"完成" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
-
+    for (UIView *child in self.tabBar.subviews) {
+        if ([child isKindOfClass:[UIControl class]]) {
+            [child removeFromSuperview];
+        }
+    }
 }
+/**
+ *  初始化所有子控制器
+ */
+- (void)setupAllChildViewControllers
+{
+    ListViewController *home = [[ListViewController alloc] init];
+    //home.tabBarItem.badgeValue = @"2";
+    [self setupChildViewController:home title:@"首页"
+                         imageName:@"tabbar_home"
+                 selectedImageName:@"tabbar_home_selected"];
+    
+    FinishViewController *message = [[FinishViewController alloc] init];
+    //message.tabBarItem.badgeValue = @"16";
+    [self setupChildViewController:message title:@"消息"
+                         imageName:@"tabbar_message_center"
+                 selectedImageName:@"tabbar_message_center_selected"];
+    
+    //    XXDiscoverViewController *discover = [[XXDiscoverViewController alloc] init];
+    //    discover.tabBarItem.badgeValue = @"new";
+    //    self.vc = discover;
+    //    [self setupChildViewController:discover title:@"发现"
+    //                         imageName:@"tabbar_discover"
+    //                 selectedImageName:@"tabbar_discover_selected"];
+    //
+    //    XXMeViewController *me = [[XXMeViewController alloc] init];
+    //    [self setupChildViewController:me title:@"我"
+    //                         imageName:@"tabbar_profile"
+    //                 selectedImageName:@"tabbar_profile_selected"];
+}
+
+//
+//- (void)addAllChildVcs
+//{
+//    
+//    ListViewController *list = [[ListViewController alloc] init];
+//    [self addOneChildVc:list title:@"清单" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
+//    
+//    FinishViewController *done = [[FinishViewController alloc] init];
+//    [self addOneChildVc:done title:@"完成" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
+//
+//}
 
 
 
@@ -143,6 +194,24 @@
 /**
  *  默认只调用该功能一次
  */
+- (void)setupChildViewController:(UIViewController *)VC title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName
+{
+    // 给tabBarItem设置数据
+    VC.title = title;
+    VC.tabBarItem.image = [UIImage imageNamed:imageName];
+    VC.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //添加导航控制器
+    FLNavigationController *nav = [[FLNavigationController alloc] initWithRootViewController:VC];
+    [self addChildViewController:nav];
+    [self.tabBarView addTabBarButtonWithItem:VC.tabBarItem];
+
+    // 初始化导航控制器
+//    XXNavigationController *nav = [[XXNavigationController alloc] initWithRootViewController:VC];
+//    [self addChildViewController:nav];
+//    
+//    // 添加tabBarView内部按钮
+//    [self.tabBarView addTabBarButtonWithItem:VC.tabBarItem];
+}
 
 + (void)initialize
 {
@@ -152,32 +221,42 @@
 }
 
 
+//
+//#pragma mark - DSTabBarDelegate
+//- (void)tabBarDidClickedPlusButton:(PlusTabBarView *)tabBar
+//{
+//    NSLog(@"我是加按钮");
+//   PlusButtonViewController *plusbuttonVc = [[PlusButtonViewController alloc] initWithNibName:@"PlusButtonViewController" bundle:nil];
+//
+//    //设置两个VC的图像大小相等。
+//    plusbuttonVc.view.frame = self.view.frame;
+//    [self.view addSubview:plusbuttonVc.view];
+//    [self addChildViewController:plusbuttonVc];
+//    [plusbuttonVc didMoveToParentViewController:self];
+////    plusVc.modalPresentationStyle = UIModalPresentationFormSheet;
+////    plusVc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+//    //[self presentViewController:plusbuttonVc animated:YES completion:nil];
+//       //    plusVc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+//}
 
-#pragma mark - DSTabBarDelegate
-- (void)tabBarDidClickedPlusButton:(PlusTabBar *)tabBar
+- (void)tabBarView:(PlusTabBarView *)tabBarView didSelectedButtonFrom:(int)from to:(int)to
+{
+    // 切换控制器
+    self.selectedIndex = to;
+}
+
+- (void)tabBarViewSendStatus:(PlusTabBarView *)tabBarView
 {
     NSLog(@"我是加按钮");
-   PlusButtonViewController *plusbuttonVc = [[PlusButtonViewController alloc] initWithNibName:@"PlusButtonViewController" bundle:nil];
-
+    PlusButtonViewController *plusbuttonVc = [[PlusButtonViewController alloc] initWithNibName:@"PlusButtonViewController" bundle:nil];
+    
     //设置两个VC的图像大小相等。
     plusbuttonVc.view.frame = self.view.frame;
     [self.view addSubview:plusbuttonVc.view];
     [self addChildViewController:plusbuttonVc];
     [plusbuttonVc didMoveToParentViewController:self];
-//    plusVc.modalPresentationStyle = UIModalPresentationFormSheet;
-//    plusVc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    //[self presentViewController:plusbuttonVc animated:YES completion:nil];
-       //    plusVc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-}
-#pragma mark - PlusPopoverDelegate
-- (NSString *)PlusPopoverController:(PlusPopoverController *)pvc choiceLevelName:(NSString *)name{
-    
 
-    return @"woso";
-    
-    
 }
-
 
 
 @end

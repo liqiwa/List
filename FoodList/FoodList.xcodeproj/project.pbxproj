@@ -11,8 +11,9 @@
 		332E3B261EC195B40069FC98 /* PlusButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332E3B241EC195B40069FC98 /* PlusButtonViewController.xib */; };
 		332E3B2A1EC1A61F0069FC98 /* LeaveTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E3B281EC1A61F0069FC98 /* LeaveTwoViewController.m */; };
 		332E3B2B1EC1A61F0069FC98 /* LeaveTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332E3B291EC1A61F0069FC98 /* LeaveTwoViewController.xib */; };
+		332E3B2F1EC6E31D0069FC98 /* LeaveLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E3B2E1EC6E31D0069FC98 /* LeaveLabel.m */; };
 		333AAEA61EBB062600C3BB75 /* FLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333AAEA51EBB062600C3BB75 /* FLNavigationController.m */; };
-		33428A611EBC1572003DFDEE /* PlusPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33428A601EBC1572003DFDEE /* PlusPopoverController.m */; };
+		33428A611EBC1572003DFDEE /* PlustabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33428A601EBC1572003DFDEE /* PlustabBarButton.m */; };
 		3363E6C31EB33A9100B35354 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363E6C21EB33A9100B35354 /* main.m */; };
 		3363E6C61EB33A9100B35354 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363E6C51EB33A9100B35354 /* AppDelegate.m */; };
 		3363E6C91EB33A9100B35354 /* TotalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363E6C81EB33A9100B35354 /* TotalViewController.m */; };
@@ -34,7 +35,7 @@
 		33A14AC71EBA0AFD00419F84 /* LeaveTwoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AC61EBA0AFD00419F84 /* LeaveTwoDAO.m */; };
 		33A14ACA1EBA0B1600419F84 /* LeaveOneDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AC91EBA0B1600419F84 /* LeaveOneDAO.m */; };
 		33A14ACD1EBA0B3100419F84 /* ListItemDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14ACC1EBA0B3100419F84 /* ListItemDAO.m */; };
-		33A14AD21EBA311F00419F84 /* PlusTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AD11EBA311F00419F84 /* PlusTabBar.m */; };
+		33A14AD21EBA311F00419F84 /* PlusTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AD11EBA311F00419F84 /* PlusTabBarView.m */; };
 		33A14AD81EBAB5DB00419F84 /* FLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14AD71EBAB5DB00419F84 /* FLTabBarController.m */; };
 		33A14ADC1EBACBDC00419F84 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14ADB1EBACBDC00419F84 /* UIImage+Extension.m */; };
 		33A14ADF1EBAD08500419F84 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A14ADE1EBAD08500419F84 /* UIView+Extension.m */; };
@@ -58,10 +59,13 @@
 		332E3B271EC1A61F0069FC98 /* LeaveTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveTwoViewController.h; sourceTree = "<group>"; };
 		332E3B281EC1A61F0069FC98 /* LeaveTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveTwoViewController.m; sourceTree = "<group>"; };
 		332E3B291EC1A61F0069FC98 /* LeaveTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaveTwoViewController.xib; sourceTree = "<group>"; };
+		332E3B2C1EC5B4480069FC98 /* FOODCONST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOODCONST.h; sourceTree = "<group>"; };
+		332E3B2D1EC6E31D0069FC98 /* LeaveLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveLabel.h; sourceTree = "<group>"; };
+		332E3B2E1EC6E31D0069FC98 /* LeaveLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveLabel.m; sourceTree = "<group>"; };
 		333AAEA41EBB062600C3BB75 /* FLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNavigationController.h; sourceTree = "<group>"; };
 		333AAEA51EBB062600C3BB75 /* FLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNavigationController.m; sourceTree = "<group>"; };
-		33428A5F1EBC1572003DFDEE /* PlusPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusPopoverController.h; sourceTree = "<group>"; };
-		33428A601EBC1572003DFDEE /* PlusPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlusPopoverController.m; sourceTree = "<group>"; };
+		33428A5F1EBC1572003DFDEE /* PlustabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlustabBarButton.h; sourceTree = "<group>"; };
+		33428A601EBC1572003DFDEE /* PlustabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlustabBarButton.m; sourceTree = "<group>"; };
 		3363E6BD1EB33A9100B35354 /* FoodList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3363E6C11EB33A9100B35354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3363E6C21EB33A9100B35354 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,8 +107,8 @@
 		33A14AC91EBA0B1600419F84 /* LeaveOneDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveOneDAO.m; sourceTree = "<group>"; };
 		33A14ACB1EBA0B3100419F84 /* ListItemDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemDAO.h; sourceTree = "<group>"; };
 		33A14ACC1EBA0B3100419F84 /* ListItemDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemDAO.m; sourceTree = "<group>"; };
-		33A14AD01EBA311F00419F84 /* PlusTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusTabBar.h; sourceTree = "<group>"; };
-		33A14AD11EBA311F00419F84 /* PlusTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlusTabBar.m; sourceTree = "<group>"; };
+		33A14AD01EBA311F00419F84 /* PlusTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusTabBarView.h; sourceTree = "<group>"; };
+		33A14AD11EBA311F00419F84 /* PlusTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlusTabBarView.m; sourceTree = "<group>"; };
 		33A14AD61EBAB5DB00419F84 /* FLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLTabBarController.h; sourceTree = "<group>"; };
 		33A14AD71EBAB5DB00419F84 /* FLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLTabBarController.m; sourceTree = "<group>"; };
 		33A14ADA1EBACBDC00419F84 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				3363E6CD1EB33A9100B35354 /* Main.storyboard */,
 				3363E6D01EB33A9100B35354 /* Images.xcassets */,
 				3363E6D21EB33A9100B35354 /* LaunchScreen.xib */,
+				332E3B2C1EC5B4480069FC98 /* FOODCONST.h */,
 				33A14AAC1EB48B5B00419F84 /* pp.pch */,
 				3363E6C01EB33A9100B35354 /* Supporting Files */,
 			);
@@ -276,8 +281,8 @@
 				332E3B221EC195B40069FC98 /* PlusButtonViewController.h */,
 				332E3B231EC195B40069FC98 /* PlusButtonViewController.m */,
 				332E3B241EC195B40069FC98 /* PlusButtonViewController.xib */,
-				33428A5F1EBC1572003DFDEE /* PlusPopoverController.h */,
-				33428A601EBC1572003DFDEE /* PlusPopoverController.m */,
+				33428A5F1EBC1572003DFDEE /* PlustabBarButton.h */,
+				33428A601EBC1572003DFDEE /* PlustabBarButton.m */,
 				333AAEA41EBB062600C3BB75 /* FLNavigationController.h */,
 				333AAEA51EBB062600C3BB75 /* FLNavigationController.m */,
 				33A14AD61EBAB5DB00419F84 /* FLTabBarController.h */,
@@ -289,8 +294,10 @@
 		33A14AD31EBAB17A00419F84 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33A14AD01EBA311F00419F84 /* PlusTabBar.h */,
-				33A14AD11EBA311F00419F84 /* PlusTabBar.m */,
+				332E3B2D1EC6E31D0069FC98 /* LeaveLabel.h */,
+				332E3B2E1EC6E31D0069FC98 /* LeaveLabel.m */,
+				33A14AD01EBA311F00419F84 /* PlusTabBarView.h */,
+				33A14AD11EBA311F00419F84 /* PlusTabBarView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -488,10 +495,11 @@
 				33A14AD81EBAB5DB00419F84 /* FLTabBarController.m in Sources */,
 				33A14ACD1EBA0B3100419F84 /* ListItemDAO.m in Sources */,
 				33A14ADF1EBAD08500419F84 /* UIView+Extension.m in Sources */,
-				33A14AD21EBA311F00419F84 /* PlusTabBar.m in Sources */,
-				33428A611EBC1572003DFDEE /* PlusPopoverController.m in Sources */,
+				33A14AD21EBA311F00419F84 /* PlusTabBarView.m in Sources */,
+				33428A611EBC1572003DFDEE /* PlustabBarButton.m in Sources */,
 				33A14AAB1EB480AA00419F84 /* LeftViewController.m in Sources */,
 				33A14AB21EB6D20700419F84 /* LeaveOne.m in Sources */,
+				332E3B2F1EC6E31D0069FC98 /* LeaveLabel.m in Sources */,
 				33A14AAF1EB6D19B00419F84 /* ListGroup.m in Sources */,
 				332E3B251EC195B40069FC98 /* PlusButtonViewController.m in Sources */,
 				33A14AC71EBA0AFD00419F84 /* LeaveTwoDAO.m in Sources */,
