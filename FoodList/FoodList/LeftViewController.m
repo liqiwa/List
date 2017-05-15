@@ -30,7 +30,7 @@
     [db open];
     _array = [[NSArray alloc] init];
     _array = [db selectData];
-    NSLog(@"%ld",_array.count);
+   // NSLog(@"%ld",_array.count);
     [db close];
 
 }

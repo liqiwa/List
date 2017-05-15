@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LeaveLabel;
+@protocol LeaveLabelDelegate <NSObject>
 
+-(void *)LeaveLabel:(LeaveLabel *)label 
+
+@end
 @interface LeaveLabel : UILabel
 
 @end

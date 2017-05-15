@@ -51,13 +51,13 @@
 - (void)addFoodLabel{
     CGFloat labelx = 8;
     CGFloat labely = 38;
-    CGFloat with = 42;
-    CGFloat height = 21;
-    NSArray * namearry = [NSArray arrayWithObjects:@"萝卜",@"白菜",@"土豆",nil];
-    for (int i = 1; i< 4; i++) {
+    CGFloat with = 80;
+    CGFloat height = 30;
+    NSArray * namearry = [NSArray arrayWithObjects:@"高筋面粉",@"高筋面粉",@"高筋面粉",nil];
+    for (int i = 1; i< 7; i+=2) {
         CGFloat newx  = with*i +labelx ;
         //自定义label格式
-        UILabel *label = [[LeaveLabel alloc]initWithFrame:CGRectMake(newx, labely, with, height)];
+        LeaveLabel *label = [[LeaveLabel alloc]initWithFrame:CGRectMake(newx, labely, with, height)];
        int randomIndex =  arc4random()%3;
         label.text = namearry[randomIndex];
         [self.popubView addSubview:label];
