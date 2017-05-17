@@ -12,6 +12,7 @@
 		332E3B2A1EC1A61F0069FC98 /* LeaveTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E3B281EC1A61F0069FC98 /* LeaveTwoViewController.m */; };
 		332E3B2B1EC1A61F0069FC98 /* LeaveTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332E3B291EC1A61F0069FC98 /* LeaveTwoViewController.xib */; };
 		332E3B2F1EC6E31D0069FC98 /* LeaveLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E3B2E1EC6E31D0069FC98 /* LeaveLabel.m */; };
+		332E3B321ECAF86B0069FC98 /* LeavePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E3B311ECAF86B0069FC98 /* LeavePopView.m */; };
 		333AAEA61EBB062600C3BB75 /* FLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333AAEA51EBB062600C3BB75 /* FLNavigationController.m */; };
 		33428A611EBC1572003DFDEE /* PlustabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33428A601EBC1572003DFDEE /* PlustabBarButton.m */; };
 		3363E6C31EB33A9100B35354 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363E6C21EB33A9100B35354 /* main.m */; };
@@ -62,6 +63,8 @@
 		332E3B2C1EC5B4480069FC98 /* FOODCONST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOODCONST.h; sourceTree = "<group>"; };
 		332E3B2D1EC6E31D0069FC98 /* LeaveLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaveLabel.h; sourceTree = "<group>"; };
 		332E3B2E1EC6E31D0069FC98 /* LeaveLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaveLabel.m; sourceTree = "<group>"; };
+		332E3B301ECAF8660069FC98 /* LeavePopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeavePopView.h; sourceTree = "<group>"; };
+		332E3B311ECAF86B0069FC98 /* LeavePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeavePopView.m; sourceTree = "<group>"; };
 		333AAEA41EBB062600C3BB75 /* FLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNavigationController.h; sourceTree = "<group>"; };
 		333AAEA51EBB062600C3BB75 /* FLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNavigationController.m; sourceTree = "<group>"; };
 		33428A5F1EBC1572003DFDEE /* PlustabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlustabBarButton.h; sourceTree = "<group>"; };
@@ -281,8 +284,6 @@
 				332E3B221EC195B40069FC98 /* PlusButtonViewController.h */,
 				332E3B231EC195B40069FC98 /* PlusButtonViewController.m */,
 				332E3B241EC195B40069FC98 /* PlusButtonViewController.xib */,
-				33428A5F1EBC1572003DFDEE /* PlustabBarButton.h */,
-				33428A601EBC1572003DFDEE /* PlustabBarButton.m */,
 				333AAEA41EBB062600C3BB75 /* FLNavigationController.h */,
 				333AAEA51EBB062600C3BB75 /* FLNavigationController.m */,
 				33A14AD61EBAB5DB00419F84 /* FLTabBarController.h */,
@@ -294,10 +295,14 @@
 		33A14AD31EBAB17A00419F84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				332E3B301ECAF8660069FC98 /* LeavePopView.h */,
+				332E3B311ECAF86B0069FC98 /* LeavePopView.m */,
 				332E3B2D1EC6E31D0069FC98 /* LeaveLabel.h */,
 				332E3B2E1EC6E31D0069FC98 /* LeaveLabel.m */,
 				33A14AD01EBA311F00419F84 /* PlusTabBarView.h */,
 				33A14AD11EBA311F00419F84 /* PlusTabBarView.m */,
+				33428A5F1EBC1572003DFDEE /* PlustabBarButton.h */,
+				33428A601EBC1572003DFDEE /* PlustabBarButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 				33A14AC11EB780B200419F84 /* ListGroupDao.m in Sources */,
 				3363E6C31EB33A9100B35354 /* main.m in Sources */,
 				333AAEA61EBB062600C3BB75 /* FLNavigationController.m in Sources */,
+				332E3B321ECAF86B0069FC98 /* LeavePopView.m in Sources */,
 				332E3B2A1EC1A61F0069FC98 /* LeaveTwoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
