@@ -32,4 +32,8 @@
 #define DSNavigationItemMargin 10
 //首页导航popmenu距离顶部高度
 #define DSPopMenuMarginTop 10
+// 4.屏幕大小尺寸
+#define screen_width [UIScreen mainScreen].bounds.size.width
+#define screen_height [UIScreen mainScreen].bounds.size.height
+
 #endif

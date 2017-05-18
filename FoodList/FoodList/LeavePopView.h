@@ -10,6 +10,6 @@
 #import "LeaveOne.h"
 #import "LeaveTwo.h"
 @interface LeavePopView : UIView
-- (id)initWithFrame:(CGRect)frame LeaveOneModal:(LeaveOne *)oneModal;
+- (id)initWithFrame:(CGRect)frame leaveModalArray:(NSMutableArray *)array;
 - (id)initWithFrame:(CGRect)frame LeaveTwoModal:(LeaveTwo *)twoModal;
 @end

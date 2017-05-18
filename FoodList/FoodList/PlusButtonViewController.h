@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import  <MMDrawerController.h>
-
+#import "LeavePopView.h"
 @interface PlusButtonViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *popubView;
-
+@property(nonatomic,strong)LeavePopView *popView;
 @end

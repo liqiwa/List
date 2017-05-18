@@ -18,7 +18,7 @@
     self.backgroundColor = [UIColor whiteColor];
     //self.textColor = [UIColor blackColor];
     self.textAlignment = NSTextAlignmentCenter;
-    self.font  = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16];
+    self.font  = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
     self.layer.borderWidth = 1;
     self.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.frame = frame;
