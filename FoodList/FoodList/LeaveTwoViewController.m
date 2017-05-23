@@ -42,4 +42,7 @@
     [self removeFromParentViewController];
 
 }
+//选择菜品，然后确定，添加到购买清单中。使用通知进行菜品添加。
+
+
 @end

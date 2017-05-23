@@ -51,10 +51,13 @@
     return self;
 }
 //代理方法，需要plusbuttonvc执行，然后进行子类页面的切换。
+
 - (void)taptouch:(UITapGestureRecognizer *)sender
 {
+    UILabel *label = (UILabel *)sender.view;
+    [self.delegate LeavePopViewDelegate:self LabelID:label.tag];
 
-    NSLog(@"label Id is %ld",sender.view.tag);
+    NSLog(@"label Id is %@",label.text);
 }
 - (id)initWithFrame:(CGRect)frame LeaveTwoModal:(LeaveTwo *)twoModal{
 

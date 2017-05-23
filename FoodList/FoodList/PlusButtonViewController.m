@@ -10,7 +10,7 @@
 #import "LeaveTwoViewController.h"
 #import "LeaveLabel.h"
 #import "LeavePopView.h"
-@interface PlusButtonViewController ()<UIGestureRecognizerDelegate>
+@interface PlusButtonViewController ()<UIGestureRecognizerDelegate,LeavePopViewDelegate>
 @property(nonatomic,strong)LeaveLabel *foodLabel;
 @end
 
@@ -94,16 +94,24 @@
     [array addObject:lodata4];
      
     self.popView = [[LeavePopView alloc] initWithFrame:CGRectMake(8, 100, screen_width-16, screen_height-200)leaveModalArray:array];
-    
+    self.popView.delegate = self;
 
 }
+//使用代理方法实现推出leave2级菜单显示菜品
+#pragma mark - leavepopvcdelegate
+- (void)LeavePopViewDelegate:(LeavePopView *)lpvc LabelID:(NSInteger)lbid{
 
-- (IBAction)pushLeaveTwoVc:(id)sender{
+    //根据id 来显示对应的二级页面显示内容。
+   
     LeaveTwoViewController *letwoVc = [[LeaveTwoViewController alloc] initWithNibName:@"LeaveTwoViewController" bundle:nil];
     [self.view addSubview:letwoVc.view];
-    letwoVc.view.center= self.view.center  ;
+    letwoVc.view.frame= lpvc.frame  ;
     [self addChildViewController:letwoVc];
     [letwoVc didMoveToParentViewController:self];
+    
+}
+- (IBAction)pushLeaveTwoVc:(id)sender{
+    
 
     //[self presentViewController:letwoVc animated:YES completion:nil];
 }
